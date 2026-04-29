@@ -1,6 +1,6 @@
 [project]
 name = "tui-example"
-version = "0.1.0"
+version = "0.0.1"
 # Use a non-package layout since we only have mcp.py at the root
 readme = "README.md"
 description = ""

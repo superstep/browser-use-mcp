@@ -28,13 +28,44 @@ This project implements a Model Context Protocol (MCP) server that provides a sp
 
 ## Running the Server
 
-To start the MCP server:
+To start the MCP server during development:
 
 ```bash
 uv run browser-mcp
 ```
 
 The server will start and listen for JSON-RPC connections over `stdio`.
+
+### Configuration Example (MCP Client)
+
+To use this server with an MCP client (like Claude Desktop) using the built wheel distribution:
+
+1. **Build the project**:
+   ```bash
+   uv build
+   ```
+
+2. **Install the package**:
+   ```bash
+   uv tool install dist/*.whl
+   ```
+
+3. **Configure the client**:
+   Add the following to your MCP configuration file:
+
+```json
+{
+  "mcpServers": {
+    "browser-mcp": {
+      "command": "browser-mcp",
+      "env": {
+        "LLM_DEEPSEEK_API_KEY": "your_api_key_here",
+        "CDP_URL": "http://192.168.0.111:9223"
+      }
+    }
+  }
+}
+```
 
 ## Features
 
