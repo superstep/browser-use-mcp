@@ -1,5 +1,5 @@
 [project]
-name = "tui-example"
+name = "browser-use-mcp"
 version = "0.0.1"
 # Use a non-package layout since we only have mcp.py at the root
 readme = "README.md"
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-browser-mcp = "server:mcp.run"
+browser-use-mcp = "server:mcp.run"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]
